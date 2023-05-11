@@ -18,7 +18,7 @@ function onButtonClick() {
   document.getElementById("interval-container").remove();
   zeitH1.style = "visibility: visible";
   timesH1.style = "visibility: visible";
-  secondsRemaining = interval * 1;
+  secondsRemaining = interval * 60;
   tick();
   setInterval(tick, 1000);
 }
@@ -28,7 +28,7 @@ function tick() {
   if (secondsRemaining > 0) {
     secondsRemaining -= 1;
   } else {
-    secondsRemaining = interval * 1;
+    secondsRemaining = interval * 60;
     times += 1;
     timesH1.innerText = `Times: ${times}`;
     let sound = new Audio("sound.wav");
